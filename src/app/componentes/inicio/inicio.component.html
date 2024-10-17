@@ -1,25 +1,26 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos">
+            <form [formGroup]="formularioForm" (ngSubmit)="enviarDatos()">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                    <input type="text" class="form-control">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" class="form-control" formControlName="nombre">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Apellido</label>
-                    <input type="text" class="form-control">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" id="apellido" class="form-control" formControlName="apellido">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Edad</label>
-                    <input type="number" class="form-control">
+                    <label for="edad" class="form-label">Edad</label>
+                    <input type="number" id="edad" class="form-control" formControlName="edad">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control">
+                    <label for="gmail" class="form-label">Email</label>
+                    <input type="email" id="gmail" class="form-control" formControlName="email">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
+        <h2 *ngIf="datos_formulario != null">Hola {{datos_formulario.nombre}} {{datos_formulario.apellido}}</h2>
     </div>
 </div>

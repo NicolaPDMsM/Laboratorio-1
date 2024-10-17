@@ -22,8 +22,9 @@ export class InicioComponent {
     console.log(this.formularioForm);
   }
   enviarDatos(){
-    console.log("Ingresemos a la finción dal botos")
+    console.log("Enviar datos")
     this.datos_formulario = this.formularioForm.value;
-    console.log(this.datos_formulario);
+    console.log(this.formularioForm.value);
+    console.log("Hola "+this.formularioForm.value.nombre, this.formularioForm.value.apellido);
   }
 }
